@@ -5,6 +5,13 @@ https://create-react-app.dev/docs/getting-started/
 ## Cấu trúc
 + File html thuần là public/index
 + File main là src/index.js
++ services: api
++ components: reuse code
++ store: cho redux
++ utils: function js
+
+## SCSS
+Thay cho css thông thường
 
 # Getting Started with Create React App
 
