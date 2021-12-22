@@ -1,3 +1,11 @@
+## Các document
+https://reactjs.org/docs/create-a-new-react-app.html
+https://create-react-app.dev/docs/getting-started/
+
+## Cấu trúc
++ File html thuần là public/index
++ File main là src/index.js
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
