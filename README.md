@@ -13,6 +13,26 @@ https://create-react-app.dev/docs/getting-started/
 ## SCSS
 Thay cho css thông thường
 
+## Component 
+```
+Chính là viên gạch xây dựng web,
+mỗi cụm object của web sẽ là 1 component.
+Bản chất là các function js, return mã html về
+Độc lập và tái sử dụng
+```
++ Class component
++ Function component
+
+## JSX
++ JSX chính là việc gán 1 biến js có giá trị là 1 thẻ, hay 1 đoạn html
++ Mục đích: viết logic xử lý ngay trong html
+```js
+return (
+    something in html
+    { function by js}
+)
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
