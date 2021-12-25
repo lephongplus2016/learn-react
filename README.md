@@ -1,37 +1,56 @@
 ## Các document
+
 https://reactjs.org/docs/create-a-new-react-app.html
 https://create-react-app.dev/docs/getting-started/
 
+## Khởi tạo
+
+```
+npx create-react-app my-app
+```
+
 ## Cấu trúc
-+ File html thuần là public/index
-+ File main là src/index.js
-+ services: api
-+ components: reuse code
-+ store: cho redux
-+ utils: function js
+
+-   File html thuần là public/index
+-   File main là src/index.js
+-   services: api
+-   components: reuse code
+-   store: cho redux
+-   utils: function js
 
 ## SCSS
+
 Thay cho css thông thường
 
-## Component 
+## Component
+
 ```
 Chính là viên gạch xây dựng web,
 mỗi cụm object của web sẽ là 1 component.
 Bản chất là các function js, return mã html về
 Độc lập và tái sử dụng
 ```
-+ Class component
-+ Function component
+
+-   Class component
+-   Function component
 
 ## JSX
-+ JSX chính là việc gán 1 biến js có giá trị là 1 thẻ, hay 1 đoạn html
-+ Mục đích: viết logic xử lý ngay trong html
+
+-   JSX chính là việc gán 1 biến js có giá trị là 1 thẻ, hay 1 đoạn html
+-   Mục đích: viết logic xử lý ngay trong html
+
 ```js
 return (
     something in html
     { function by js}
 )
 ```
+
+## State
+
+-   Là các dữ liệu có sự thay đổi liên tục
+-   Yêu cầu không cần load lại page, mà vẫn phải cập nhật hiển thị giá trị mới.
+-   Đây cũng là điểm mà chỉ frameworks frontend mới làm được
 
 # Getting Started with Create React App
 

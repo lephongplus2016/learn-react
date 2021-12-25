@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.scss";
 import MyComponent from "./example/MyComponent";
+import Bai5_state from "./example/Bai5_state";
 
 function App() {
     // cái đống html mà function này trả về, giới mộ điệu gọi là JSX
@@ -19,7 +20,8 @@ function App() {
                 </a>
                 {/* sau khi import thì component được sử dụng như 1 thẻ html */}
                 {/* <MyComponent></MyComponent> */}
-                <MyComponent />
+                {/* <MyComponent /> */}
+                <Bai5_state />
             </header>
         </div>
     );
