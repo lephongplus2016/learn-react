@@ -52,6 +52,8 @@ return (
 -   Yêu cầu không cần load lại page, mà vẫn phải cập nhật hiển thị giá trị mới.
 -   Đây cũng là điểm mà chỉ frameworks frontend mới làm được
 
+## Tool react dev tools
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
