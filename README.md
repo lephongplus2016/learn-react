@@ -51,6 +51,7 @@ return (
 -   Là các dữ liệu có sự thay đổi liên tục
 -   Yêu cầu không cần load lại page, mà vẫn phải cập nhật hiển thị giá trị mới.
 -   Đây cũng là điểm mà chỉ frameworks frontend mới làm được
+-   Bí mật là khi state thay đổi giá trị, thì ngay lập tức component đó sẽ gọi re-render -> real time
 
 ## Tool react dev tools
 
