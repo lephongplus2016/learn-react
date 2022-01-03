@@ -59,9 +59,8 @@ class Bai9_form extends React.Component {
                 </form>
 
                 {/* gọi component con với data truyền vào */}
-                <ChildComponent name={"child one"} />
-                <ChildComponent name={"child two"} />
-                <ChildComponent name={"child three"} />
+                {/* syntax là truyền = {} */}
+                <ChildComponent name={"child one"} age={"18"} />
             </>
         );
     }

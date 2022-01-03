@@ -58,6 +58,7 @@ return (
 -   Các component có tính chất của tree
 -   component được gọi trong component khác được gọi là con
 -   conponent cha truyền data cho con qua prop
+-   chỉ có thể truyền 1 chiều
 
 ## Exchange sang commit cũ
 
