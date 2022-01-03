@@ -53,6 +53,20 @@ return (
 -   Đây cũng là điểm mà chỉ frameworks frontend mới làm được
 -   Bí mật là khi state thay đổi giá trị, thì ngay lập tức component đó sẽ gọi re-render -> real time
 
+## Child component `Nest component`
+
+-   Các component có tính chất của tree
+-   component được gọi trong component khác được gọi là con
+-   conponent cha truyền data cho con qua prop
+
+## Exchange sang commit cũ
+
+```bash
+git checkout ma_so_commit
+// tro ve
+git checkout dev
+```
+
 ## Tool react dev tools
 
 # Getting Started with Create React App
