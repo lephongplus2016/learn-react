@@ -60,6 +60,13 @@ return (
 -   conponent cha truyền data cho con qua prop
 -   chỉ có thể truyền 1 chiều
 
+## Lỗi
+
+https://stackoverflow.com/questions/47616355/foreach-in-react-jsx-does-not-output-any-html
+
+> Ta thấy rằng forEach không trả về html nên ko dùng đc.
+> Thay vì đó, JSX dùng hàm map để tạo và trả về 1 array mới
+
 ## Exchange sang commit cũ
 
 ```bash

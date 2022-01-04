@@ -7,6 +7,11 @@ class Bai9_form extends React.Component {
     state = {
         firstName: "",
         lastName: "",
+        arrJobs: [
+            { id: "abcJob1", title: "Developers", salary: "500 $" },
+            { id: "abcJob2", title: "Testers", salary: "400 $" },
+            { id: "abcJob3", title: "Project managers", salary: "1000 $" },
+        ],
     };
     handleOnchangeFirstname = (event) => {
         this.setState({
@@ -60,7 +65,11 @@ class Bai9_form extends React.Component {
 
                 {/* gọi component con với data truyền vào */}
                 {/* syntax là truyền = {} */}
-                <ChildComponent name={"child one"} age={"18"} />
+                <ChildComponent
+                    name={this.state.firstName}
+                    age={"18"}
+                    arrJobs={this.state.arrJobs}
+                />
             </>
         );
     }

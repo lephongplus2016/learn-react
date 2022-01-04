@@ -27,13 +27,37 @@ class ChildComponent extends React.Component {
         // let name = this.props.name;
         // let age = this.props.age;
         // cách viết tắt
-        let { name, age } = this.props;
+        let { name, age, arrJobs } = this.props;
 
+        // Line 32:9:   'printLst' is not defined  no-undef
+        // let printLst = () => {
+        //     let xhtml = "";
+        //     arrJobs.array.forEach((item) => {
+        //         xhtml += `<div key=${item.id}>
+        //                 ${item.title} - ${item.salary}
+        //             </div>`;
+        //     });
+        //     return xhtml;
+        // };
+
+        // ko khai báo thì lỗi, mà khai báo ở dưới thì ko đc
+        // ở JSX chỉ dùng thôi, ko có let hay var gì cả
+        let aList;
         return (
             <>
-                {/* gọi props sẽ tự hiểu là lấy của cha truyền */}
-                <div>
-                    child component: {name} - {age}
+                <div className="job-lists">
+                    {/* hàm map đơn giản là copy array cũ, trả về array mới */}
+                    {
+                        (aList = arrJobs.map((item, index) => {
+                            return (
+                                // cần định nghĩa thêm id cho các thẻ div
+                                <div key={item.id}>
+                                    {item.title} - {item.salary}
+                                </div>
+                            );
+                        }))
+                    }
+                    {console.log("hàm map trả về cho ta cái gì", aList)}
                 </div>
             </>
         );
