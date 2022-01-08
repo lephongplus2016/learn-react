@@ -40,10 +40,22 @@ Bản chất là các function js, return mã html về
 -   Mục đích: viết logic xử lý ngay trong html
 
 ```js
+something in js
 return (
     something in html
     { function by js}
 )
+```
+- trong 1 function hay class jsx thì viết js, muốn viết html thì viết trong return (html).
+- trong html muốn gọi hàm hay biến js đã định nghĩa ở ngoài return () thì viết trong {js variable, or function}
+- chú ý ở ngoài render thì chỉ có state({}) và các function js thôi, ko đc có biến js. 
+- Chủ yếu ngoài render là các hàm tương tác với state như:
+```js
+handleOnchangeFirstname = (event) => {
+        this.setState({
+            firstName: event.target.value,
+        });
+    };
 ```
 
 ## State
@@ -78,7 +90,7 @@ git checkout dev
 ## Tool react dev tools
 
 ## `Stateless` & `Statefull`
-+ `Stateless`: là dạng function component trong react, 1 function chỉ nhận data- props từ cha và thay đổi hiển thị của nó, nó không quan tâm đến state.
++ `Stateless`: là dạng function component trong react, 1 function chỉ nhận data- props từ cha và thay đổi hiển thị của nó, nó không quan tâm đến state. Function chỉ có `return` ko có `render`
 + `Statefull`: là class component trong react, sau này trở thành hook
 Chú ý: function ko có `state`
 # Getting Started with Create React App
