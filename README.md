@@ -77,6 +77,10 @@ git checkout dev
 
 ## Tool react dev tools
 
+## `Stateless` & `Statefull`
++ `Stateless`: là dạng function component trong react, 1 function chỉ nhận data- props từ cha và thay đổi hiển thị của nó, nó không quan tâm đến state.
++ `Statefull`: là class component trong react, sau này trở thành hook
+Chú ý: function ko có `state`
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
