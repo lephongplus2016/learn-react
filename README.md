@@ -100,6 +100,14 @@ Chú ý: function ko có `state`
 Cha truyền dữ liệu cho con thông qua props, không chỉ là state, mà còn là function
 ```
 
+Nếu không muốn hiển thị gì cả thì có thể dùng thẻ span
+
+## Onlick()
+```js
+onChange={(event) => { this.handleOnchangesalary(event);
+```
+ngoài event ko được truyền gì khác ở () => cả, vì nó tự hiểu là truyền vào event.
+Nếu muốn truyền giá trị khác thì phải viết bên ngoài hàm, rồi truyền vào ở () thứ hai
 
 # Getting Started with Create React App
 

@@ -17,7 +17,7 @@ class AddComponent extends React.Component {
     handleClick = (event) => {
         // ngăn mặc định sẽ tải lại trang mỗi khi thực hiện submit form
         event.preventDefault();
-        
+
         console.log("check input data", this.state);
         if (!this.state.title || !this.state.salary) {
             alert('Missing required params')
@@ -26,6 +26,7 @@ class AddComponent extends React.Component {
         console.log('>>> check data input: ', this.state)
         // trả về props function này 1 object là được
         this.props.addNewJob({
+            // đảm bảo id là 
             id: Math.floor(Math.random() * 1001),
             title: this.state.title,
             salary: this.state.salary
