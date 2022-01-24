@@ -121,6 +121,9 @@ Nếu muốn truyền giá trị khác thì phải viết bên ngoài hàm, rồ
 
 - Để dùng class trong React, thì từ khóa là `className`
 
+https://reactjs.org/docs/react-component.html
+## Nhớ là Dev tool cũng có debug
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
