@@ -109,6 +109,14 @@ onChange={(event) => { this.handleOnchangesalary(event);
 ngoài event ko được truyền gì khác ở () => cả, vì nó tự hiểu là truyền vào event.
 Nếu muốn truyền giá trị khác thì phải viết bên ngoài hàm, rồi truyền vào ở () thứ hai
 
+## Virtual DOM
+- Real DOM: là toàn bộ element thật của trang web.
+- Virtual DOM : là 11 bộ DOM ảo, được react tạo ra, nó tạo ra dựa trên previous và current DOM, mỗi khi gọi hàm render().
+- React sẽ so sánh virtual dom và real dom, và nó chỉ chỉnh sửa thành phần khác biệt của 2 cái, tức chỉ thay đổi ít trên real DOM cho giống Virtual DOM.
+-> tạo ra sự khác biệt hiệu suất.
+-> real time ko cần refresh trang.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
