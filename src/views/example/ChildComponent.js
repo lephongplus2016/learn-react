@@ -1,5 +1,5 @@
 import React from "react";
-
+import './Demo.scss';
 
 class ChildComponent extends React.Component {
     state = {
@@ -29,7 +29,8 @@ class ChildComponent extends React.Component {
         return (
             <>
                 { showJob === false ? 
-                        <div><button onClick={()=> { this.handleShow()}}>show</button></div>
+                // cách thêm class cho element
+                        <div><button className="demo_style" onClick={()=> { this.handleShow()}}>show</button></div>
                     :
                         <>
                             <div className="job-lists">

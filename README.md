@@ -116,6 +116,10 @@ Nếu muốn truyền giá trị khác thì phải viết bên ngoài hàm, rồ
 -> tạo ra sự khác biệt hiệu suất.
 -> real time ko cần refresh trang.
 
+## SCSS
+- Để dùng inline style trong react xem hướng dẫn tại [đây](https://www.w3schools.com/react/react_css.asp)
+
+- Để dùng class trong React, thì từ khóa là `className`
 
 # Getting Started with Create React App
 

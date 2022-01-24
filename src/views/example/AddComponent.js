@@ -42,7 +42,8 @@ class AddComponent extends React.Component {
         return (
             <>
                 <form>
-                    <label for="fname">Title Job:</label>
+                    {/* inline style trên react không thể như html bình thường */}
+                    <label style={{color: "yellow"}} for="fname">Title Job:</label>
                     <br />
                     <input
                         type="text"
