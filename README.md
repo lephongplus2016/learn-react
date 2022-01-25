@@ -124,6 +124,11 @@ Nếu muốn truyền giá trị khác thì phải viết bên ngoài hàm, rồ
 https://reactjs.org/docs/react-component.html
 ## Nhớ là Dev tool cũng có debug
 
+
+## Thư viện xịn xò , toastify
+https://www.npmjs.com/package/react-toastify
+[DEMO](https://fkhadra.github.io/react-toastify/introduction/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

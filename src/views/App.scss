@@ -16,10 +16,10 @@
 .App-header {
     background-color: #282c34;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
     // thuộc tính font-size này tính theo vmin (% chiều ngang) nên tạo ra cái gọi là responsible
     font-size: calc(10px + 2vmin);
     color: white;
@@ -37,3 +37,4 @@
         transform: rotate(360deg);
     }
 }
+
