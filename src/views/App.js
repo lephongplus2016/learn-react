@@ -28,8 +28,8 @@ function App() {
                 <TodoList/>
             </header>
 
-        {/* cần thêm toast container vào nếu muốn custom */}
-            {/* <ToastContainer
+        {/* cần thêm toast container vào nữa*/}
+            <ToastContainer
                 position="top-right"
                 autoClose={5000}
                 hideProgressBar={false}
@@ -41,7 +41,7 @@ function App() {
                 pauseOnHover
                 />
 
-            {/* <ToastContainer /> */}
+            <ToastContainer />
         </div>
     );
 }

@@ -129,6 +129,65 @@ https://reactjs.org/docs/react-component.html
 https://www.npmjs.com/package/react-toastify
 [DEMO](https://fkhadra.github.io/react-toastify/introduction/)
 
+## Về vấn đề if else trong JSX
+> Tại sao không thể dùng if else trong JSX mà cứ phải dùng toán tử 3 ngôi?
+
+Theo DOC :
+
+>các câu lệnh if-else không hoạt động bên trong JSX. Điều này là do JSX chỉ là đường cú pháp cho các lệnh gọi hàm và xây dựng đối tượng.
+
+Quy tắc cơ bản:
+
+>JSX về cơ bản là `đường cú pháp` . Sau khi biên dịch, các biểu thức JSX trở thành các lệnh gọi hàm JavaScript thông thường và đánh giá thành các đối tượng `JavaScript`. Chúng ta có thể nhúng bất kỳ biểu thức JavaScript nào vào JSX bằng cách đặt nó trong dấu ngoặc nhọn.
+
+- Nhưng chỉ có các biểu thức không phải là câu lệnh, có nghĩa là trực tiếp chúng ta không thể đặt bất kỳ câu lệnh nào ( `if-else` / `switch` / `for` ) bên trong `JSX` .
+
+- Nếu bạn muốn hiển thị phần tử có điều kiện thì hãy sử dụng ternary operator, như sau:
+```JS
+render() {
+    return (   
+        <View style={styles.container}>
+            {this.state.value == 'news'? <Text>data</Text>: null }
+        </View>
+    )
+}
+```
+- Một tùy chọn khác là, gọi một hàm từ `jsx` và đặt tất cả `if-elselogic` bên trong nó, như thế này:
+```JS
+renderElement(){
+   if(this.state.value == 'news')
+      return <Text>data</Text>;
+   return null;
+}
+
+render() {
+    return (   
+        <View style={styles.container}>
+            { this.renderElement() }
+        </View>
+    )
+}
+```
+
+
+Tham khảo tại link [stackoverflow](https://stackoverflow.com/questions/44046037/if-else-statement-inside-jsx-reactjs)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## ======================================================================================
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
