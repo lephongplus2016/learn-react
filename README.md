@@ -169,6 +169,36 @@ render() {
 }
 ```
 
+## Update object in JS
+ [here](https://stackoverflow.com/questions/4689856/how-to-change-value-of-object-which-is-inside-an-array-using-javascript-or-jquer)
+
+
+It is quite simple
+
+Find the index of the object using findIndex method.
+Store the index in variable.
+Do a simple update like this: `yourArray[indexThatyouFind]`
+```js
+//Initailize array of objects.
+let myArray = [
+  {id: 0, name: "Jhon"},
+  {id: 1, name: "Sara"},
+  {id: 2, name: "Domnic"},
+  {id: 3, name: "Bravo"}
+],
+    
+//Find index of specific object using findIndex method.    
+objIndex = myArray.findIndex((obj => obj.id == 1));
+
+//Log object to Console.
+console.log("Before update: ", myArray[objIndex])
+
+//Update object's name property.
+myArray[objIndex].name = "Laila"
+
+//Log object to console again.
+console.log("After update: ", myArray[objIndex])
+```
 
 Tham khảo tại link [stackoverflow](https://stackoverflow.com/questions/44046037/if-else-statement-inside-jsx-reactjs)
 

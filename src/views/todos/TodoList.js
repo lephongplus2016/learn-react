@@ -30,16 +30,61 @@ class TodoList extends React.Component {
 
     handleDeleteTodo = (todo_to_delete) => {
         let currentTodos = this.state.listtodo;
-        currentTodos = currentTodos.filter(item => item.id != todo_to_delete.id)
+        currentTodos = currentTodos.filter(item => item.id !== todo_to_delete.id)
         this.setState({
             listtodo: currentTodos
         })
     }
 
+    // bây giờ button này giữ 2 nhiệm vụ, là edit: lưu item cần sửa vào state.editTodo
+    // save: update object js
     handleEditTodo = (item_to_edit) => {
+        // handle save
+        let {editTodo, listtodo} = this.state;
+
+        let checkEmptyObj = Object.keys(editTodo).length === 0;
+
+        let listtodoCopy = [...listtodo];
+
+        if (checkEmptyObj === false && editTodo.id === item_to_edit.id) {
+
+
+            //Find index of specific object using findIndex method.    
+            let objIndex = listtodoCopy.findIndex((item => item.id === editTodo.id));
+
+            //Log object to Console.
+            console.log("Before update: ", listtodoCopy[objIndex])
+
+            //Update object's name property.
+            listtodoCopy[objIndex].title = editTodo.title
+
+            //Log object to console again.
+            console.log("After update: ", listtodoCopy[objIndex])
+
+
+            //save that nay
+            this.setState({
+                listtodo:listtodoCopy,
+                editTodo: ''
+            })
+            toast.success("Update so easy!")
+            // return rồi thì sẽ ko đi xuống nữa
+            return;
+        }
+
         // lấy item cần edit
         this.setState({
             editTodo: item_to_edit
+        })
+    }
+
+    //nếu ko có hàm onChange này thì ko thể edit input task được -> vì value nó đã gán cứng là state.editTodo rồi
+    // nên lấy giá trị event.target.value gán cho state.editTodo thì nó mới thay đổi được value hiển thị của thẻ input này
+    handleOnchangeEditTodo = (event) => {
+        let editTodoCopy = {...this.state.editTodo};
+        editTodoCopy.title = event.target.value;
+        this.setState({
+            editTodo: editTodoCopy
         })
     }
 
@@ -47,7 +92,7 @@ class TodoList extends React.Component {
         let {listtodo, editTodo} = this.state;
         // == voi let listtodo = this.state.listtodo;
         let checkEmptyObj = Object.keys(editTodo).length === 0;
-        console.log("check empty objec : ", checkEmptyObj);
+        console.log("check edit to do : ", editTodo.title);
         return (
             <>
                 <h3>Simple TODO App</h3>
@@ -67,16 +112,25 @@ class TodoList extends React.Component {
                                 <div className="todo-child" key={item.id}>
 
                                 {/* câu lệnh if để check */}
-                                {   checkEmptyObj === true ?
-                                        <span> {index + 1} - {item.title} </span>
+                                {   checkEmptyObj === false && editTodo.id === item.id ?
+                                        <span> {index + 1} - <input value={editTodo.title} 
+                                                                    onChange={(event) => this.handleOnchangeEditTodo(event) } 
+                                                            ></input> 
+                                        </span>
                                     : 
-                                        <span> {index + 1} - <input value={editTodo.value}></input> </span>
+                                        <span> {index + 1} - {item.title} </span>
                                     
                                 }
 
                                     <button className="edit"
                                         onClick={() => this.handleEditTodo(item)}
-                                    >Edit</button>
+                                    >
+                                    {   checkEmptyObj === false && editTodo.id === item.id ?    
+                                        'Save'
+                                        :
+                                        'Edit' 
+                                    }
+                                    </button>
                                     <button className="delete"
                                         onClick={() => this.handleDeleteTodo(item)}
                                     >Delete</button>
