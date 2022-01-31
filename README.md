@@ -46,16 +46,18 @@ return (
     { function by js}
 )
 ```
-- trong 1 function hay class jsx thì viết js, muốn viết html thì viết trong return (html).
-- trong html muốn gọi hàm hay biến js đã định nghĩa ở ngoài return () thì viết trong {js variable, or function}
-- chú ý ở ngoài render thì chỉ có state({}) và các function js thôi, ko đc có biến js. 
-- Chủ yếu ngoài render là các hàm tương tác với state như:
+
+-   trong 1 function hay class jsx thì viết js, muốn viết html thì viết trong return (html).
+-   trong html muốn gọi hàm hay biến js đã định nghĩa ở ngoài return () thì viết trong {js variable, or function}
+-   chú ý ở ngoài render thì chỉ có state({}) và các function js thôi, ko đc có biến js.
+-   Chủ yếu ngoài render là các hàm tương tác với state như:
+
 ```js
 handleOnchangeFirstname = (event) => {
-        this.setState({
-            firstName: event.target.value,
-        });
-    };
+    this.setState({
+        firstName: event.target.value,
+    });
+};
 ```
 
 ## State
@@ -87,15 +89,16 @@ git checkout ma_so_commit
 git checkout dev
 ```
 
-
 ## Tool react dev tools
 
 ## `Stateless` & `Statefull`
-+ `Stateless`: là dạng function component trong react, 1 function chỉ nhận data- props từ cha và thay đổi hiển thị của nó, nó không quan tâm đến state. Function chỉ có `return` ko có `render`
-+ `Statefull`: là class component trong react, sau này trở thành hook
-Chú ý: function ko có `state`
+
+-   `Stateless`: là dạng function component trong react, 1 function chỉ nhận data- props từ cha và thay đổi hiển thị của nó, nó không quan tâm đến state. Function chỉ có `return` ko có `render`
+-   `Statefull`: là class component trong react, sau này trở thành hook
+    Chú ý: function ko có `state`
 
 ## Props
+
 ```
 Cha truyền dữ liệu cho con thông qua props, không chỉ là state, mà còn là function
 ```
@@ -103,56 +106,65 @@ Cha truyền dữ liệu cho con thông qua props, không chỉ là state, mà c
 Nếu không muốn hiển thị gì cả thì có thể dùng thẻ span
 
 ## Onlick()
+
 ```js
 onChange={(event) => { this.handleOnchangesalary(event);
 ```
+
 ngoài event ko được truyền gì khác ở () => cả, vì nó tự hiểu là truyền vào event.
 Nếu muốn truyền giá trị khác thì phải viết bên ngoài hàm, rồi truyền vào ở () thứ hai
 
 ## Virtual DOM
-- Real DOM: là toàn bộ element thật của trang web.
-- Virtual DOM : là 11 bộ DOM ảo, được react tạo ra, nó tạo ra dựa trên previous và current DOM, mỗi khi gọi hàm render().
-- React sẽ so sánh virtual dom và real dom, và nó chỉ chỉnh sửa thành phần khác biệt của 2 cái, tức chỉ thay đổi ít trên real DOM cho giống Virtual DOM.
--> tạo ra sự khác biệt hiệu suất.
--> real time ko cần refresh trang.
+
+-   Real DOM: là toàn bộ element thật của trang web.
+-   Virtual DOM : là 11 bộ DOM ảo, được react tạo ra, nó tạo ra dựa trên previous và current DOM, mỗi khi gọi hàm render().
+-   React sẽ so sánh virtual dom và real dom, và nó chỉ chỉnh sửa thành phần khác biệt của 2 cái, tức chỉ thay đổi ít trên real DOM cho giống Virtual DOM.
+    -> tạo ra sự khác biệt hiệu suất.
+    -> real time ko cần refresh trang.
 
 ## SCSS
-- Để dùng inline style trong react xem hướng dẫn tại [đây](https://www.w3schools.com/react/react_css.asp)
 
-- Để dùng class trong React, thì từ khóa là `className`
+-   Để dùng inline style trong react xem hướng dẫn tại [đây](https://www.w3schools.com/react/react_css.asp)
+
+-   Để dùng class trong React, thì từ khóa là `className`
 
 https://reactjs.org/docs/react-component.html
+
 ## Nhớ là Dev tool cũng có debug
 
-
 ## Thư viện xịn xò , toastify
+
 https://www.npmjs.com/package/react-toastify
 [DEMO](https://fkhadra.github.io/react-toastify/introduction/)
 
 ## Về vấn đề if else trong JSX
+
 > Tại sao không thể dùng if else trong JSX mà cứ phải dùng toán tử 3 ngôi?
 
 Theo DOC :
 
->các câu lệnh if-else không hoạt động bên trong JSX. Điều này là do JSX chỉ là đường cú pháp cho các lệnh gọi hàm và xây dựng đối tượng.
+> các câu lệnh if-else không hoạt động bên trong JSX. Điều này là do JSX chỉ là đường cú pháp cho các lệnh gọi hàm và xây dựng đối tượng.
 
 Quy tắc cơ bản:
 
->JSX về cơ bản là `đường cú pháp` . Sau khi biên dịch, các biểu thức JSX trở thành các lệnh gọi hàm JavaScript thông thường và đánh giá thành các đối tượng `JavaScript`. Chúng ta có thể nhúng bất kỳ biểu thức JavaScript nào vào JSX bằng cách đặt nó trong dấu ngoặc nhọn.
+> JSX về cơ bản là `đường cú pháp` . Sau khi biên dịch, các biểu thức JSX trở thành các lệnh gọi hàm JavaScript thông thường và đánh giá thành các đối tượng `JavaScript`. Chúng ta có thể nhúng bất kỳ biểu thức JavaScript nào vào JSX bằng cách đặt nó trong dấu ngoặc nhọn.
 
-- Nhưng chỉ có các biểu thức không phải là câu lệnh, có nghĩa là trực tiếp chúng ta không thể đặt bất kỳ câu lệnh nào ( `if-else` / `switch` / `for` ) bên trong `JSX` .
+-   Nhưng chỉ có các biểu thức không phải là câu lệnh, có nghĩa là trực tiếp chúng ta không thể đặt bất kỳ câu lệnh nào ( `if-else` / `switch` / `for` ) bên trong `JSX` .
 
-- Nếu bạn muốn hiển thị phần tử có điều kiện thì hãy sử dụng ternary operator, như sau:
+-   Nếu bạn muốn hiển thị phần tử có điều kiện thì hãy sử dụng ternary operator, như sau:
+
 ```JS
 render() {
-    return (   
+    return (
         <View style={styles.container}>
             {this.state.value == 'news'? <Text>data</Text>: null }
         </View>
     )
 }
 ```
-- Một tùy chọn khác là, gọi một hàm từ `jsx` và đặt tất cả `if-elselogic` bên trong nó, như thế này:
+
+-   Một tùy chọn khác là, gọi một hàm từ `jsx` và đặt tất cả `if-elselogic` bên trong nó, như thế này:
+
 ```JS
 renderElement(){
    if(this.state.value == 'news')
@@ -161,7 +173,7 @@ renderElement(){
 }
 
 render() {
-    return (   
+    return (
         <View style={styles.container}>
             { this.renderElement() }
         </View>
@@ -170,51 +182,48 @@ render() {
 ```
 
 ## Update object in JS
- [here](https://stackoverflow.com/questions/4689856/how-to-change-value-of-object-which-is-inside-an-array-using-javascript-or-jquer)
 
+[here](https://stackoverflow.com/questions/4689856/how-to-change-value-of-object-which-is-inside-an-array-using-javascript-or-jquer)
 
 It is quite simple
 
 Find the index of the object using findIndex method.
 Store the index in variable.
 Do a simple update like this: `yourArray[indexThatyouFind]`
+
 ```js
 //Initailize array of objects.
 let myArray = [
-  {id: 0, name: "Jhon"},
-  {id: 1, name: "Sara"},
-  {id: 2, name: "Domnic"},
-  {id: 3, name: "Bravo"}
-],
-    
-//Find index of specific object using findIndex method.    
-objIndex = myArray.findIndex((obj => obj.id == 1));
+        { id: 0, name: "Jhon" },
+        { id: 1, name: "Sara" },
+        { id: 2, name: "Domnic" },
+        { id: 3, name: "Bravo" },
+    ],
+    //Find index of specific object using findIndex method.
+    objIndex = myArray.findIndex((obj) => obj.id == 1);
 
 //Log object to Console.
-console.log("Before update: ", myArray[objIndex])
+console.log("Before update: ", myArray[objIndex]);
 
 //Update object's name property.
-myArray[objIndex].name = "Laila"
+myArray[objIndex].name = "Laila";
 
 //Log object to console again.
-console.log("After update: ", myArray[objIndex])
+console.log("After update: ", myArray[objIndex]);
 ```
 
 Tham khảo tại link [stackoverflow](https://stackoverflow.com/questions/44046037/if-else-statement-inside-jsx-reactjs)
 
+## React routers
 
+https://www.npmjs.com/package/react-router-dom
+Để sử dụng router react hỗ trợ chạy mà ko cần tải lại trang, ta tải modules sau.
+Trang [document](https://reactrouter.com/)
 
+chú ý có 2 phiên bản: v5 và v6.
+Ở đây a eric sử dụng code v5 : https://reactrouter.com/docs/en/v6/upgrading/v5
 
-
-
-
-
-
-
-
-
-
-
+Phiên bản v6: https://reactrouter.com/docs/en/v6/getting-started/tutorial
 
 ## ======================================================================================
 
