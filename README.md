@@ -225,6 +225,28 @@ chú ý có 2 phiên bản: v5 và v6.
 
 Phiên bản v6: https://reactrouter.com/docs/en/v6/getting-started/tutorial
 
+## Higher order component
+
+-   Higher-order component is a function that takes a component and returns a new component.
+
+-   Chúng ta biết componet là đơn vị cơ bản trong react để reuse code. Tưởng tượng ra có
+    component A & B , cơ bản là đầu vào và hiển thị khác nhau, nhưng cách triển khai giống nhau.
+    Có 1 số phương thức lặp đi lặp lại - có thể là gọi props, hay xử lý thông tin,... mà cả A & B đều sử dụng.
+    Vậy nên react có 1 khái niệm abstraction, 1 nơi duy nhất chia sẻ các phương thức dùng chung với các component. Gọi là `HOC`.
+
+```
+Lưu ý rằng HOC không sửa đổi component đầu vào, cũng như không sử dụng tính năng thừa kế để sao chép hành vi của nó. Đúng hơn, HOC soạn component gốc bằng cách gói nó (`wrapping`) trong một container component. HOC là một hàm thuần túy không có tác dụng phụ.
+```
+
+-   Folder HOC/Color.js là 1 HOC.
+    Tại PhongLe.js, WrappedComponent chính là PL, nó vẫn có đủ các thuộc tính của nó, nhưng được compose lại bởi function component Color
+
+-   Containers manage things like subscriptions and state, and `pass props` to components that handle things like rendering UI.
+
+Learn more: [here](https://reactjs.org/docs/higher-order-components.html)
+
+## ======================================================================================
+
 ## ======================================================================================
 
 # Getting Started with Create React App
