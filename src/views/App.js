@@ -45,7 +45,7 @@ function App() {
                         <Route path="/todo">
                             <TodoList />
                         </Route>
-                        <Route path="/about">
+                        <Route path="/about"> 
                             <PL />
                         </Route>
                     </Switch>
