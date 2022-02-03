@@ -18,6 +18,9 @@ npx create-react-app my-app
 -   store: cho redux
 -   utils: function js
 
+## TODO APP GUI
+![TODO APP GUI](https://user-images.githubusercontent.com/67221611/152325878-383c7eea-caaa-4003-8c53-c88e898631c3.png)
+
 ## SCSS
 
 Thay cho css thông thường
