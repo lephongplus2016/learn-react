@@ -35,7 +35,7 @@ class Bai9_form extends React.Component {
                 {/* đối với form của react thì không cần action
                 yêu cầu mỗi thẻ br, label phải có / ở cuối */}
                 <form>
-                    <label for="fname">First name:</label>
+                    <label Htmlfor="fname">First name:</label>
                     <br />
                     <input
                         type="text"
@@ -45,7 +45,7 @@ class Bai9_form extends React.Component {
                         }}
                     />
                     <br />
-                    <label for="lname">Last name:</label>
+                    <label Htmlfor="lname">Last name:</label>
                     <br />
                     <input
                         type="text"

@@ -19,6 +19,7 @@ npx create-react-app my-app
 -   utils: function js
 
 ## TODO APP GUI
+
 ![TODO APP GUI](https://user-images.githubusercontent.com/67221611/152325878-383c7eea-caaa-4003-8c53-c88e898631c3.png)
 
 ## SCSS
@@ -247,6 +248,30 @@ Lưu ý rằng HOC không sửa đổi component đầu vào, cũng như không 
 -   Containers manage things like subscriptions and state, and `pass props` to components that handle things like rendering UI.
 
 Learn more: [here](https://reactjs.org/docs/higher-order-components.html)
+
+## Các lỗi nên tránh error
+
+-   https://stackoverflow.com/questions/30968113/warning-unknown-dom-property-class-did-you-mean-classname
+    Lỗi vì class thay vì className, for thay vì Htmlfor
+
+-   Lỗi thay đổi trực tiếp state mà không thông qua setState
+    https://stackoverflow.com/questions/51426496/why-we-cant-change-states-in-react-without-calling-setstate
+
+```
+Lý do bạn cần sử dụng setState()phương pháp này là vì một khái niệm gọi là khả năng thay đổi.
+
+Khi trạng thái thay đổi trong một thành phần phản ứng, bạn thường muốn điều này kích hoạt kết xuất lại thành phần (để phản ánh những thay đổi này). Việc sử dụng setStatesẽ luôn kích hoạt kết xuất lại trừ khi shouldComponentUpdatengăn chặn điều này. Bằng cách đặt thuộc tính trên đối tượng trạng thái như vậy this.state.vote = this.state.vote + 1, bạn đang thay đổi đối tượng trạng thái hiện có. Do cách thức hoạt động của các đối tượng trong javascript, React không thể dễ dàng biết rằng đối tượng này đã thay đổi.
+
+Khi bạn sử dụng setState()phương thức của React, bạn đang tạo một phiên bản mới của đối tượng trạng thái mà React nhận ra và đến lượt nó, nó biết rằng nó cần phải kết xuất lại thành phần.
+```
+
+## Để react kết nối được backend hoặc gọi RESTFUL API từ server
+
+https://www.npmjs.com/package/axios
+
+Nguồn fake api để [test](https://reqres.in/)
+
+Xem chi tiết : [example]()
 
 ## ======================================================================================
 

@@ -8,6 +8,7 @@ import Bai15_split_component from "./example/Bai15_split_component";
 import TodoList from "./todos/TodoList";
 import Nav from "./Nav/Nav";
 import PL from "./example/PhongLe";
+import ListUser from "./User/ListUser";
 
 // thu vien
 import { ToastContainer, toast } from "react-toastify";
@@ -45,8 +46,11 @@ function App() {
                         <Route path="/todo">
                             <TodoList />
                         </Route>
-                        <Route path="/about"> 
+                        <Route path="/about">
                             <PL />
+                        </Route>
+                        <Route path="/user">
+                            <ListUser />
                         </Route>
                     </Switch>
                 </header>
