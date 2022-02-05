@@ -2,7 +2,7 @@ import React from "react";
 // Để sử dụng HOC tất nhiên cần import
 import { withRouter } from "react-router-dom";
 import Color from "../HOC/Color";
-
+import image from './../../assets/images/pl.png'
 class PL extends React.Component {
     // This method is called during the Mounting phase of the React Life-cycle i.e after the component is rendered.
     // thực thi sau hàm render
@@ -18,6 +18,7 @@ class PL extends React.Component {
             <div>
                 <h3>Call me: Phong Le </h3>
                 <h4>Click About or F5 for change color</h4>
+                <img src={image}  />
             </div>
         );
     }
@@ -28,3 +29,6 @@ class PL extends React.Component {
 // export default withRouter(PL);
 // Wrapping này chính là HOC function đang compose lại wrapping component
 export default Color(PL);
+
+// Về hình ảnh ko thể sử dụng đường link trực tiếp được. 
+// Do cơ chế của react, cần phải import hình ảnh như 1 biến trước, đến cả tên của ảnh cũng đã được hash
