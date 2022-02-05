@@ -9,6 +9,7 @@ import TodoList from "./todos/TodoList";
 import Nav from "./Nav/Nav";
 import PL from "./example/PhongLe";
 import ListUser from "./User/ListUser";
+import DetailUser from "./User/DetailUser";
 
 // thu vien
 import { ToastContainer, toast } from "react-toastify";
@@ -49,8 +50,12 @@ function App() {
                         <Route path="/about">
                             <PL />
                         </Route>
-                        <Route path="/user">
+                        <Route path="/user" exact>
                             <ListUser />
+                        </Route>
+                        c
+                        <Route path="/user/:id">
+                            <DetailUser />
                         </Route>
                     </Switch>
                 </header>
