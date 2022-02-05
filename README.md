@@ -229,6 +229,11 @@ chú ý có 2 phiên bản: v5 và v6.
 
 Phiên bản v6: https://reactrouter.com/docs/en/v6/getting-started/tutorial
 
+Doc v5: https://v5.reactrouter.com/web/api/Switch
+
+Có 1 số khác biệt của V5 và V6, ví dụ như `switch` trong v5 được thay bằng `router` trong v6
+https://stackoverflow.com/questions/69843615/switch-is-not-exported-from-react-router-dom
+
 ## Higher order component
 
 -   Higher-order component is a function that takes a component and returns a new component.
