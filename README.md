@@ -278,6 +278,21 @@ Nguồn fake api để [test](https://reqres.in/)
 
 Xem chi tiết : [example](https://github.com/lephongplus2016/learn-react/tree/master/src/views/User)
 
+## REDUX
+
+-   View: là react . Các keyword: UI
+
+-   Actions: keyword: dispatch
+
+-   State: keyword: store là nơi lưu trữ dữ liệu của redux, ở đây mỗi reducer đảm nhận 1 nhiệm vụ nhất định
+
+Khi react tạo 1 action thì redux sẽ nghe thấy và cập nhật lại state( redux).
+Redux bao gồm 2 khối là action và state.
+
+Redux đứng song song & trỏ tới bất kì đâu trong react
+
+Xem chi tiết : [example](https://github.com/lephongplus2016/learn-react/tree/master/src/store)
+
 ## ======================================================================================
 
 ## ======================================================================================
