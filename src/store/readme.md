@@ -10,3 +10,5 @@ và 1 dependencis: https://www.npmjs.com/package/react-redux
 [Configuring Your Store](https://redux.js.org/usage/configuring-your-store)
 
 Thư mục store quản lý redux
+
+-   State của redux là nơi share data cho các component
